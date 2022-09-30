@@ -4,6 +4,7 @@ import debounce from 'lodash.debounce';
 import { UserContext } from "src/data/context";
 import Router from "next/router"
 import style from "admin/styles/setting/name.module.css"
+import HeadMeta from "src/components/public/HeadMeta";
 
 //로그인 후 관리자명이 없을시 관리자명 설정.
 
@@ -95,6 +96,8 @@ const SetName = () => {
   }
 
   return (
+    <>
+      <HeadMeta title="대한생활체육회 관리자페이지" description="대한생활체육회 관리자페이지" url="https://xn--vk1by6xrzecngs4l6obxj.com" />
     <div className={style.background}>
       {
         isUsername? gotoHome(): (
@@ -112,6 +115,7 @@ const SetName = () => {
         </section>
         )}
     </div>
+    </>
   );
 }
 export default SetName;

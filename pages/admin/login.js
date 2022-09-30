@@ -5,6 +5,7 @@ import { UserContext } from "src/data/context";
 import Router from "next/router"
 import Link from "next/link"
 import style from "admin/styles/login.module.css"
+import HeadMeta from "src/components/public/HeadMeta";
 
 const Login = () => {
 
@@ -22,6 +23,8 @@ const Login = () => {
   }
 
   return (
+    <>
+      <HeadMeta title="대한생활체육회 관리자페이지" description="대한생활체육회 관리자페이지" url="https://xn--vk1by6xrzecngs4l6obxj.com" />
     <div className={style.background}>
       <div className={style.container}>
         <div className={style.loginContainer}>
@@ -39,7 +42,8 @@ const Login = () => {
           <h3>대한생활체육회</h3>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   )
 }
 export default Login;

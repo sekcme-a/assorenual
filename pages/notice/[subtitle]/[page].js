@@ -9,6 +9,7 @@ import NoticeList from "src/components/notice/NoticeList"
 import PhotoList from "src/components/notice/PhotoList"
 import VideoList from "src/components/notice/VideoList"
 import Head from "next/head"
+import HeadMeta from "src/components/public/HeadMeta"
 
 
 const Info = () => {
@@ -45,12 +46,11 @@ const Info = () => {
 
   return (
     <>
-      <Head>
-        <title>{`대한생활체육회|${subtitle} - ${page}페이지`}</title>
-        <meta name="description" content={`${subtitle} - 국민의 건강과 행복의 장을 여는 대한생활체육회`} />
-        <meta property="og:title" content={`대한생활체육회|${subtitle}`}/>
-        <meta property="og:description" content={`(사)대한생활체육회 단체소개-${subtitle} - 국민의 건강과 행복의 장을 여는 대한생활체육회`}></meta>
-      </Head>
+      <HeadMeta
+        title="대한생활체육회 - 알림마당"
+        description="대한생활체육회의 공지/소식사항, 언론보도, 포토갤러리등을 확인하세요."
+        url="https://xn--vk1by6xrzecngs4l6obxj.com/notice/media/1"
+      />
 
       {isPreview && <div className="preview">미리보기중입니다.</div>}
       <Banner bannerNumber={bannerRandom}/>

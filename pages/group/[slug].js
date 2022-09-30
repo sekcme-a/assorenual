@@ -7,6 +7,7 @@ import GroupList from "src/components/group/GroupList"
 import LocNav from "src/components/public/LocNav"
 import SubMenuTitle from "src/components/public/SubMenuTitle"
 import Head from "next/head"
+import HeadMeta from "src/components/public/HeadMeta"
 
 const Group = () => {
   const [bannerRandom, setBannerRandom] = useState()
@@ -41,12 +42,11 @@ const Group = () => {
 
   return (
     <>
-      <Head>
-        <title>{`대한생활체육회|${subtitle}`}</title>
-        <meta name="description" content={`(사)대한생활체육회 단체소개-${subtitle} - 국민의 건강과 행복의 장을 여는 대한생활체육회`} />
-        <meta property="og:title" content={`대한생활체육회|${subtitle}`}/>
-        <meta property="og:description" content={`(사)대한생활체육회 단체소개-${subtitle} - 국민의 건강과 행복의 장을 여는 대한생활체육회`}></meta>
-      </Head>
+      <HeadMeta
+        title="대한생활체육회 - 단체소개"
+        description="대한생활체육회의 전국, 국제 체육회 현황과 종목별 운영현황, 산하단체들을 소개합니다."
+        url="https://xn--vk1by6xrzecngs4l6obxj.com/group/nation"
+      />
 
       {isPreview && <div className="preview">미리보기중입니다.</div>}
       <Banner bannerNumber={bannerRandom}/>

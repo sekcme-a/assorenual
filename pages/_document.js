@@ -10,7 +10,11 @@ class MyDocument extends Document {
   
     return (
       <Html lang="kr">
-        <Head />
+        <Head>
+          <meta charSet="UTF-8" />
+          <link rel="icon" href="/favicon.ico" />
+          
+        </Head>
         <body>
           <Main />
           <NextScript />

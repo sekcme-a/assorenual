@@ -12,6 +12,7 @@ import { MenuItems } from "src/data/menuItems"
 import LocNav from "src/components/public/LocNav"
 import SubMenuTitle from "src/components/public/SubMenuTitle"
 import { saveAs } from 'file-saver'
+import HeadMeta from "src/components/public/HeadMeta"
 
 const QuillNoSSRWrapper = dynamic(import('react-quill'), {
   ssr: false,
@@ -107,12 +108,11 @@ const ShowArticle = () => {
   
   return (
     <>
-      <Head>
-        <title>{`대한생활체육회|${subtitle} - ${postTitle}`}</title>
-        <meta name="description" content={`${postTitle} - 국민의 건강과 행복의 장을 여는 대한생활체육회`} />
-        <meta property="og:title" content={`대한생활체육회|${subtitle}`}/>
-        <meta property="og:description" content={`(사)대한생활체육회 단체소개-${subtitle} - 국민의 건강과 행복의 장을 여는 대한생활체육회`}></meta>
-      </Head>
+      <HeadMeta
+        title="대한생활체육회 Article"
+        description="대한생활체육회의 포스팅을 확인하세요."
+        url="https://xn--vk1by6xrzecngs4l6obxj.com"
+      />
       {isPreview && <div className="preview">미리보기중입니다.</div>}
       <Banner bannerNumber={bannerRandom}/>
       <div className="subpage__container">
@@ -165,5 +165,4 @@ const ShowArticle = () => {
     </>
   )
 }
-
 export default ShowArticle

@@ -14,6 +14,7 @@ import SetGroup from "admin/src/component/SetGroup"
 import PostList from "admin/src/component/PostList"
 import { adminMenuItems } from "src/data/adminMenuItems"
 import Loader from "src/components/public/Loader"
+import HeadMeta from "src/components/public/HeadMeta";
 
 const Admin = () => {
   const router = useRouter();
@@ -50,6 +51,8 @@ const Admin = () => {
   }
 
   return (
+    <>
+      <HeadMeta title="대한생활체육회 관리자페이지" description="대한생활체육회 관리자페이지" url="https://xn--vk1by6xrzecngs4l6obxj.com" />
     <div className={style.adminBackground}>
       <div className={style.bg}>
         {userLevel==="admin" || userLevel==="author" ? (
@@ -88,7 +91,8 @@ const Admin = () => {
         )
         }
       </div>
-    </div>
+      </div>
+      </>
   )
 }
 
