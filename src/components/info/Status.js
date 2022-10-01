@@ -6,6 +6,7 @@ import Head from "next/head"
 import SubMenuTitle from "src/components/public/SubMenuTitle"
 import LazyItem from "src/components/public/LazyItem"
 import Loader from "src/components/public/Loader"
+import HeadMeta from "src/components/public/HeadMeta"
 
 const Status = (props) => {
   let title;
@@ -82,12 +83,11 @@ const Status = (props) => {
 
   return (
     <>
-      <Head>
-        <title>대한생활체육회|임원현황</title>
-        <meta name="description" content="(사)대한생활체육회 임원현황 - 국민의 건강과 행복의 장을 여는 대한생활체육회" />
-        <meta property="og:title" content="대한생활체육회|임원현황" />
-        <meta property="og:description" content="(사)대한생활체육회 임원현황 - 국민의 건강과 행복의 장을 여는 대한생활체육회"></meta>
-      </Head>
+       <HeadMeta
+        title="대한생활체육회 - 임원현황"
+        description="대한생활체육회의 임원현황을 알려드립니다 - 국민의 건강과 행복의 장을 여는 대한생활체육회"
+        url="https://xn--vk1by6xrzecngs4l6obxj.com/info/status"
+      />
       <div className={style.customBodyStatus}>
       </div>
       <div className={style.body}>

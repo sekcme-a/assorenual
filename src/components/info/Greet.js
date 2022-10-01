@@ -5,6 +5,8 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer"
 import SubMenuTitle from "src/components/public/SubMenuTitle"
 import { firestore as db } from "src/firebase/firebase"
+import HeadMeta from "src/components/public/HeadMeta"
+
 const Greet = (props) => {
   const ref = useRef();
 
@@ -116,6 +118,11 @@ const Greet = (props) => {
 
   return (
     <>
+       <HeadMeta
+        title="대한생활체육회 - 총재 인사말"
+        description="대한생활체육회 총재 김균식의 인사말입니다 - 국민의 건강과 행복의 장을 여는 대한생활체육회"
+        url="https://xn--vk1by6xrzecngs4l6obxj.com/info/greet"
+      />
       <div className={style.container}>
         <SubMenuTitle title="총재 인사말" subtitle="대한생활체육회 총재 김균식의 인사말입니다."/>
         <motion.div className={style.content__container}
