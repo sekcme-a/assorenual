@@ -76,11 +76,13 @@ const Article = () => {
           {isLoading ? <Loader /> : listData.map((item, index) => {
             return (
               <Link key={index} href='/article/[filename]/[page]/[id]' as={`/article/${selected}/1/${item.id}`}>
-                <li className={style.table}>
-                  <p>●</p>
-                  <h4 className={style.createdAt}>{item.createdAt}</h4>
-                  <h4 className={style.title}>{item.title}</h4>
-                </li>
+                <a>
+                  <li className={style.table}>
+                    <p>●</p>
+                    <h4 className={style.createdAt}>{item.createdAt}</h4>
+                    <h4 className={style.title}>{item.title}</h4>
+                  </li>
+                </a>
               </Link>
             )
           })}

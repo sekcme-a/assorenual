@@ -46,7 +46,11 @@ const Info = () => {
 
   return (
     <>
-      
+      <HeadMeta
+      title="대한생활체육회 - 체육회 소개"
+      description="대한생활체육회의 총재 인삿말, 설립목적, 중앙조직도 등을 소개합니다."
+      url="https://xn--vk1by6xrzecngs4l6obxj.com/info/greet"
+      />
       {isPreview && <div className="preview">미리보기중입니다.</div>}
       <Banner bannerNumber={bannerRandom}/>
       <div className="subpage__container">
