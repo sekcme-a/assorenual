@@ -70,8 +70,8 @@ const Pagination = (props) => {
     <>
       <ul className={style.pagination}>
         {warpPage && (warpPage[0] !== 0 &&
-          <Link href='/notice/[filename]/[page]' as={`/notice/${props.docName}/${warpPage[0]}`}>
-            <li className={style.page}><ArrowLeftIcon /></li>
+          <Link href='/notice/[filename]/[page]' as={`/notice/${props.docName}/${warpPage[0]}`} passhref>
+            <a><li className={style.page}><ArrowLeftIcon /></li></a>
           </Link>
         )}
         {pageList.map((page, index) => {
@@ -81,23 +81,23 @@ const Pagination = (props) => {
                 page === props.page ? (
                   <li key={index} className={`${style.currentPage} ${style.page}`}>{page}</li>
                 ):(
-                <Link key={index} href='/notice/[filename]/[page]' as={`/notice/${props.docName}/${page}`}>
-                  <li className={style.page}>{page}</li>
+                <Link key={index} href='/notice/[filename]/[page]' as={`/notice/${props.docName}/${page}`} passhref>
+                  <a><li className={style.page}>{page}</li></a>
                 </Link>
               )}
             </>
           )
         })}
         {warpPage && (warpPage[1] !== 0 &&
-          <Link href='/notice/[filename]/[page]' as={`/notice/${props.docName}/${warpPage[1]}`}>
-            <li className={style.page}><ArrowRightIcon /></li>
+          <Link href='/notice/[filename]/[page]' as={`/notice/${props.docName}/${warpPage[1]}`} passhref>
+            <a><li className={style.page}><ArrowRightIcon /></li></a>
           </Link>
         )}
       </ul>
       <div className={style.gotoContainer}>
         <input className={style.input} type="text" id="name" size="1" value={gotoPage} onChange={onGotoPageChange} /><p>/{lastPage}페이지</p>
-        <Link href='/notice/[filename]/[page]' as={`/notice/${props.docName}/${gotoPage}`}>
-          <div className={style.button}>이동</div>
+        <Link href='/notice/[filename]/[page]' as={`/notice/${props.docName}/${gotoPage}` } passhref>
+          <a><div className={style.button}>이동</div></a>
         </Link>
       </div>
     </>

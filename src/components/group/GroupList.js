@@ -69,7 +69,7 @@ const GroupList = (props) => {
                   <div className={style.contextContainer}>
                     <p>{convertData(item.data)}</p>
                     {item.homepage !== "-" &&
-                      <Link href={item.homepage}><a className={style.button} target="_blank">홈페이지 방문</a></Link>
+                      <Link passHref href={item.homepage}><a className={style.button} target="_blank">홈페이지 방문</a></Link>
                     }
                   </div>
                 </div>

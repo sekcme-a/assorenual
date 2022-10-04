@@ -64,8 +64,8 @@ const HeaderPopup = () => {
         {linkList[count] === "-" || linkList[count] === undefined ?
           <img className={style.img} src={urlList[count]} alt={urlList[count]} />
           :
-          <Link href={linkList[count]}>
-            <img className={style.img} src={urlList[count]} alt={urlList[count]} />
+          <Link passhref href={linkList[count]}>
+            <a><img className={style.img} src={urlList[count]} alt={urlList[count]} /></a>
           </Link>
         }
         {isLoading === false &&

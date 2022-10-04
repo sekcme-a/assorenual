@@ -12,7 +12,7 @@ class MyDocument extends Document {
       <Html lang="kr">
         <Head>
           <meta charSet="UTF-8" />
-          <link rel="icon" href="/favicon.ico" />
+          <link passHref rel="icon" href="/favicon.ico" />
           
         </Head>
         <body>

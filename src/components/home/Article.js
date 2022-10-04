@@ -70,12 +70,12 @@ const Article = () => {
           <li onClick={()=>onTabClick(0)} className={selected==="anouncement" ? `${style.selected}` : undefined}>공지/소식사항</li>
           <li onClick={() => onTabClick(1)} className={selected==="media" ? `${style.selected}` : undefined}>언론보도</li>
           <li onClick={() => onTabClick(2)} className={selected==="schedule" ? `${style.selected}` : undefined}>대회/행사일정</li>
-          <Link href='notice/anouncement/1'><li> +</li></Link>
+          <Link passHref href='notice/anouncement/1'><a><li> +</li></a></Link>
         </ul>
         <ul className={style.contentContainer}>
           {isLoading ? <Loader /> : listData.map((item, index) => {
             return (
-              <Link key={index} href='/article/[filename]/[page]/[id]' as={`/article/${selected}/1/${item.id}`}>
+              <Link passHref key={index} href='/article/[filename]/[page]/[id]' as={`/article/${selected}/1/${item.id}`}>
                 <a>
                   <li className={style.table}>
                     <p>●</p>

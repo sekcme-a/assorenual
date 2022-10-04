@@ -68,36 +68,44 @@ const About = () => {
         
 
         <div className={styles.content__container}>
-          <Link href="/info/greet">
+          <Link passHref href="/info/greet">
+            <a>
             <motion.div className={styles.item__container} initial={{ opacity: 0}} animate={aniItem1}>
               <PermIdentityIcon className={styles.icon}/>
               <h4 className={styles.title}>총재 인사말</h4>
               <p className={styles.subtitle}>어게인 필승 코리아!!<br/>대한생활체육회 총재 김균식 인사말</p>
-            </motion.div>
+              </motion.div>
+            </a>
           </Link>
 
-          <Link href="/info/purpose">
+          <Link passHref href="/info/purpose">
+            <a>
             <motion.div className={styles.item__container} initial={{ opacity: 0}} animate={aniItem2}>
               <EmojiFlagsIcon className={styles.icon}/>
               <h4 className={styles.title}>설립목적</h4>
               <p className={styles.subtitle}>스포츠가 최고의 국민건강 복지다. 대한생활체육회 설립목적을 소개합니다</p>
-            </motion.div>
+              </motion.div>
+            </a>
           </Link>
 
-          <Link href="/info/chart">
+          <Link passHref href="/info/chart">
+            <a>
             <motion.div className={styles.item__container} initial={{ opacity: 0}} animate={aniItem3}>
               <FitbitIcon className={styles.icon}/>
               <h4 className={styles.title}>중앙조직도</h4>
               <p className={styles.subtitle}>대한생활체육회의 중앙조직도를 소개합니다</p>
-            </motion.div>
+              </motion.div>
+              </a>
           </Link>
 
-          <Link href="/info/status">
+          <Link passHref href="/info/status">
+            <a>
             <motion.div className={styles.item__container} initial={{ opacity: 0}} animate={aniItem4}>
               <GroupsIcon className={styles.icon}/>
               <h4 className={styles.title}>임원현황</h4>
               <p className={styles.subtitle}>대한생활체육회을 운영하는 임원단을 소개합니다</p>
-            </motion.div>
+              </motion.div>
+              </a>
           </Link>
         </div>
       </div>

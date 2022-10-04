@@ -137,7 +137,7 @@ const SetStatus = (props) => {
         <p><textarea  value={text} onChange={onTextChange} rows="30" cols="120" required/></p>
       </div>
 
-      <Link href={`/group/${props.type}Preview`}><a className={style.button} target="_blank" onClick={onPreviewClick}>미리보기</a></Link>
+      <Link passHref href={`/group/${props.type}Preview`}><a className={style.button} target="_blank" onClick={onPreviewClick}>미리보기</a></Link>
       <input type="submit" onClick={onSubmitClick} className={style.button2} value="적용"></input>
     </form>
   )

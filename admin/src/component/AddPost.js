@@ -388,8 +388,6 @@ const AddPost = (props) => {
       <div className={`${style.quillContainer} ${style.container}`}>
         <QuillNoSSRWrapper className={style.quill}onChange={onChange} modules={modules} formats={formats} theme="snow" />
       </div>
-      {/* <Link href="/info/greetPreview"><a className={style.button} target="_blank" onClick={onPreviewClick}>미리보기</a></Link>
-      <input type="submit" onClick={onSubmitClick} className={style.button2} value="적용"></input> */}
         <input className={style.submitButton} type="submit" value="업로드" onClick={onSubmit}></input>
         <div className={`${style.quillContainer} ${style.container}`}>
           <div className={style.previewContainer}>

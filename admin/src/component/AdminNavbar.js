@@ -54,10 +54,12 @@ const AdminNavbar = (props) => {
                 </li>
               }
               {(item.type === "main" && item.child===false)&&
-                <Link href={`/admin${item.path}`} >
-                  <li className={style.mainItem} onClick={() => onMainItemClick(item.title)} key={index}>
-                    {getIcon(item.icon)}<p>{item.title}</p>
-                  </li>
+                <Link passHref href={`/admin${item.path}`} >
+                  <a>
+                    <li className={style.mainItem} onClick={() => onMainItemClick(item.title)} key={index}>
+                      {getIcon(item.icon)}<p>{item.title}</p>
+                    </li>
+                  </a>
                 </Link>
               }
               {(item.type === "sub" && item.title===clickedMain) &&
@@ -77,17 +79,20 @@ const AdminNavbar = (props) => {
                 </li>
               }
               {(item.type === "main" && item.child===false && item.level==="author")&&
-                <Link href={`/admin${item.path}`} >
+                <Link passHref href={`/admin${item.path}`} >
+                  <a>
                   <li className={style.mainItem} onClick={() => onMainItemClick(item.title)} key={index}>
                     {getIcon(item.icon)}<p>{item.title}</p>
-                  </li>
+                    </li>
+                    </a>
                 </Link>
               }
               {(item.type === "sub" && item.title===clickedMain && item.level==="author") &&
-                <Link href={`/admin${item.path}`} >
-                  <li className={style.subItem} key={index} >
+                <Link passHref href={`/admin${item.path}`} >
+                  <a><li className={style.subItem} key={index} >
                     {item.subtitle}
                   </li>
+                    </a>
                 </Link>
               }
             </>

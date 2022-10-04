@@ -7,7 +7,7 @@ const LocNav = (props) => {
   return (
     <div className="location__container">
       <HomeIcon className="homeIcon"/>
-      <Link href="/" passHref><h4> 홈</h4></Link>
+      <Link href="/" passHref><a><h4> 홈</h4></a></Link>
       <ArrowRightIcon className="arrowRightIcon" /> <h4>{props.title}</h4> <ArrowRightIcon className="arrowRightIcon" /> <h4>{props.subtitle}</h4>
     </div>
   )

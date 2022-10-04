@@ -66,7 +66,7 @@ const SetChart = () => {
         <p>이미지 선택 : <input type="file" name="selectedImg[]" onChange={onImgChange} accept="image/*"/></p>
       </div>
 
-      <Link href="/info/chartPreview"><a className={style.button} target="_blank" onClick={onPreviewClick}>미리보기</a></Link>
+      <Link passHref href="/info/chartPreview"><a className={style.button} target="_blank" onClick={onPreviewClick}>미리보기</a></Link>
       <input type="submit" onClick={onSubmitClick} className={style.button2} value="적용"></input>
     </form>
   )

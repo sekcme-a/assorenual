@@ -145,8 +145,8 @@ const ShowArticle = () => {
               )}
           <QuillNoSSRWrapper className={style.quillContainer} value={postContent} readOnly={true} theme="bubble" />
             <div className={style.buttonContainer}>
-              <Link href="/notice/[subtitle]/[page]"as={`/notice/${data.filename}/${data.page}`}>
-                <div className={style.button} >돌아가기</div>
+              <Link passHref href="/notice/[subtitle]/[page]"as={`/notice/${data.filename}/${data.page}`}>
+                <a><div className={style.button} >돌아가기</div></a>
               </Link>
             </div>
           </div>

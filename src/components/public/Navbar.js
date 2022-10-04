@@ -25,13 +25,15 @@ const Navbar = () => {
     <div className="navbar">
       <div className="navbar-logo">
         <Link href="/" passHref>
+          <a>
           <Image
             src="/logo.png"
             height={60}
             width={190}
             alt="대한생활체육회 로고"
             className="navbar-logo-img">
-          </Image>
+            </Image>
+            </a>
         </Link>
       </div>
       <ul className="navbar-content">
@@ -52,7 +54,7 @@ const Navbar = () => {
               ) : (
                   <>
                     <li className="nav-item" key={index}>
-                      <Link href={item.path} className="nav-links" onClick={closeMobileMenu}>{item.title}</Link>
+                      <Link href={item.path} className="nav-links" onClick={closeMobileMenu} passHref><a>{item.title}</a></Link>
                     </li>
                     <div className="nav-border"></div>
                   </>
