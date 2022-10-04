@@ -169,21 +169,21 @@ const PhotoList = (props) => {
               :
               listData.map((item, index) => {
               return (
-                <Link key={index} passHref href='/article/[filename]/[page]/[id]' as={`/article/${props.folderName}/${props.page}/${item.id}`}>
-                  <a>
-                  <li className={style.imgTable}>
-                    {item.thumbnail && (
-                      <div className={style.imgContainer}>
-                        <img src={item.thumbnail} alt={item.title}/>
-                      </div>
-                    )}
+             <li key={index} className={style.imgTable}>
+                  {item.thumbnail && (
+                    <div className={style.videoContainer}>
+                      <img className={style.video}src={item.thumbnail}/>
+                    </div>
+                  )}
+                  <Link passHref  href='/article/[filename]/[page]/[id]' as={`/article/${props.folderName}/${props.page}/${item.id}`}>
+                    <a>
                     <div className={style.textContainer}>
                       <div className={style.imgTitle}>{item.title}</div>
                       <div className={style.imgCreatedAt}>{item.createdAt}</div>
-                    </div>
-                    </li>
-                    </a>
-                </Link>
+                      </div>
+                      </a>
+                  </Link>
+                </li>
               )
             })}
           </ul>

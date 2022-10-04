@@ -62,7 +62,7 @@ const Navbar = () => {
             </>
           )
         })}
-        {/* <Link href="http://ksfaa.co.kr"><a className="nav-item logIn" target="_blank">회원가입 및 회원증 확인</a></Link> */}
+        <Link href="http://ksfaa.co.kr"><a className="nav-item logIn" target="_blank">회원가입 및 회원증 확인</a></Link>
       </ul>
     </div>
   )

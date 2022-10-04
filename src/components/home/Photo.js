@@ -97,21 +97,21 @@ const Photo = () => {
         <ul className={style.list}>
           {isImageLoading ? <Loader /> : listData.map((item, index) => {
             return (
-              <Link passhref key={index} href='/article/[filename]/[page]/[id]' as={`/article/photo/1/${item.id}`}>
-                <a>
-                <li className={style.imgTable}>
+                <li key={index} className={style.imgTable}>
                   {item.thumbnail && (
-                    <div className={style.imgContainer}>
-                      <img src={item.thumbnail} alt={item.title}/>
+                    <div className={style.videoContainer}>
+                      <img className={style.video}src={item.thumbnail}/>
                     </div>
                   )}
-                  <div className={style.textContainer}>
-                    <div className={style.imgTitle}>{item.title}</div>
-                    <div className={style.imgCreatedAt}>{item.createdAt}</div>
-                  </div>
-                  </li>
-                  </a>
-              </Link>
+                <Link passhref href='/article/[filename]/[page]/[id]' as={`/article/video/1/${item.id}`}>
+                  <a>
+                    <div className={style.textContainer}>
+                      <div className={style.imgTitle}>{item.title}</div>
+                      <div className={style.imgCreatedAt}>{item.createdAt}</div>
+                    </div>
+                    </a>
+                </Link>
+                </li>
             )
           })}
         </ul>

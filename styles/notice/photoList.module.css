@@ -1,5 +1,6 @@
 .list{
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
   margin: auto;
   grid-template-columns: repeat(4, 1fr);
@@ -17,10 +18,20 @@
   list-style: none;
   margin-top: 15px;
   overflow-x: auto;
-  max-width: 100%;
-  width: 100%;
+  width: 23%;
   box-sizing: border-box;
   border: 1px solid rgb(176, 176, 176);
+}
+@media (max-width: 1020px){
+  .imgTable{
+    width: 31%;
+  }
+}
+@media (max-width: 670px){
+  .imgTable{
+    width: 100%;
+  }
+  .list a{width: 45%}
 }
 .imgTable .imgContainer{
   width: 100%;
@@ -78,16 +89,16 @@
 }
 
 @media screen and (max-width: 868px){
-  .list{
+  /* .list{
     grid-template-columns: repeat(3, 1fr) !important;
-  }
+  } */
 }
 @media screen and (max-width: 550px){
-  .list{
+  /* .list{
     grid-template-columns: repeat(2, 1fr) !important;
     grid-gap: 10px;
-  }
-  .imgTable{
+  } */
+  /* .imgTable{
     margin-top: 5px;
     height: 150px;
   }
@@ -106,5 +117,5 @@
   }
   .textContainer .imgCreatedAt{
     padding-top: 1px;
-  }
+  } */
 }
