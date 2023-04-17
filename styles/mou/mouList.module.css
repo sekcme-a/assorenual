@@ -10,6 +10,10 @@
   border-top: none;
 }
 
+.title_container{
+  font-size: 20px;
+}
+
 .container{
   font-family: "SUIT-Medium", sans-serif;
   border-bottom: 1.5px solid rgba(255, 206, 70, 0.226);
@@ -67,15 +71,18 @@
   color: white;
 }
 
-@media(max-width: 500px){
+@media(max-width: 650px){
+  .title_container{
+    font-size: 15px;
+  }
   .container .title{
     font-size: 15px;
   }
   .container .imgContainer{
-    width: 30%;
+    width: 40%;
   }
   .container .contextContainer{
-    width: 70%;
+    width: 60%;
     padding-left: 5px;
   }
   .container .contextContainer p{
@@ -87,9 +94,10 @@
     padding: 3px 4px;
   }
 }
-@media(max-width: 320px){
+@media(max-width: 450px){
   .container .imgContainer{
     width: 42%;
+    height: 50px;
   }
   .container .contextContainer{
     width: 58%;

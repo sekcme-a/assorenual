@@ -59,7 +59,7 @@ const MouCompo = (props) => {
 
   return (
     <div>
-      <div style={{fontSize:"20px",  marginBottom:"10px"}}>대한생활체육회와 협력하고있는 기관들을 소개합니다.</div>
+      <div className={style.title_container}>대한생활체육회와 협력하고있는 기관들을 소개합니다.</div>
       {isLoading ? <Loader /> : (
         <>
           {groupData.map((item, index) => {

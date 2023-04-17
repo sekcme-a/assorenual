@@ -73,6 +73,7 @@
   }
   .container .imgContainer{
     width: 30%;
+    padding-right: 10px;
   }
   .container .contextContainer{
     width: 70%;
