@@ -3,12 +3,14 @@ import Link from "next/link"
 import Image from "next/image"
 import { MenuItems } from "src/data/menuItems"
 import DropdownPc from "src/components/public/DropdownPc"
+import { useRouter } from "next/router"
 
 const Navbar = () => {
   const [click, setClick] = useState(false)
   const [dropdownmo, setDropdownmo] = useState(false)
   const [onMouseTitle, setOnMouseTitle] = useState("")
   const [isUserLoggedIn, setIsUserLoggedIn] = useState(false)
+  const router = useRouter()
 
   const handleClick = () => setClick(!click)
   const closeMobileMenu = () => setClick(false)
@@ -45,7 +47,9 @@ const Navbar = () => {
                   <li className="nav-item"
                     key={index}
                     onMouseEnter={() => onMouseEnter(item.title)}
-                    onMouseLeave={onMouseLeave}>
+                    onMouseLeave={onMouseLeave}
+                    // onClick={()=>router.push
+                  >
                     {item.title}
                     {dropdownmo && (item.title === onMouseTitle && <DropdownPc mainTitle={onMouseTitle} onClick={closeMobileMenu}/>)}
                   </li>
@@ -62,7 +66,7 @@ const Navbar = () => {
             </>
           )
         })}
-        <Link href="http://ksfaa.co.kr"><a className="nav-item logIn" target="_blank">회원가입 및 회원증 확인</a></Link>
+        <Link href="http://ksfaa.co.kr"><a className="nav-item logIn" target="_blank" style={{fontSize:"14px"}}>회원가입/회원증 확인</a></Link>
       </ul>
     </div>
   )

@@ -185,6 +185,21 @@ export const adminMenuItems = [
     path: '/editreference',
     level: "author",
   },
+  {
+    type: "main",
+    title: '협력업체 편집',
+    child: true,
+    icon: "ModeIcon",
+    level: "author",
+  },
+  {
+    type: "sub",
+    title: '협력업체 편집',
+    child: false,
+    subtitle: '협력업체 편집',
+    path: '/editMou',
+    level: "author",
+  },
 
   // {
   //   type: "main",

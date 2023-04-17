@@ -23,22 +23,24 @@ const SetStatus = (props) => {
   useEffect(async () => {
     let tempText="";
     await db.collection("setting").doc(props.type).get().then((doc) => {
-      const res = JSON.parse(doc.data().data)
-      // setData(res)
-      res.forEach((item) => {
-        tempText += `${item.name}///${item.img}///${item.homepage}`
-        if (item.data) {
-          if (item.data[0] !== "") {
-            for (let i = 0; i < item.data.length; i++) {
-              tempText += `///${item.data[i]}`
-            }
+      if(doc.exists){
+        const res = JSON.parse(doc.data().data)
+        // setData(res)
+        res.forEach((item) => {
+          tempText += `${item.name}///${item.img}///${item.homepage}`
+          if (item.data) {
+            if (item.data[0] !== "") {
+              for (let i = 0; i < item.data.length; i++) {
+                tempText += `///${item.data[i]}`
+              }
+              tempText += "\n"
+            } else tempText+="\n"
+          } else {
             tempText += "\n"
-          } else tempText+="\n"
-        } else {
-          tempText += "\n"
-        }
-      })
-      setText(tempText)
+          }
+        })
+        setText(tempText)
+      }
     })
     // constantChange();
   }, [])
@@ -131,13 +133,19 @@ const SetStatus = (props) => {
       </div>
 
       <div className={`${style.container} ${style.container2}`}>
-        <h4>임원현황 변경</h4>
-        <p className={style.warning}>*형식 : 체육회명///이미지명(없으면"-"로 표기)///체육회홈페이지(없으면"-"로 표기)///내용1///내용2///내용3...  줄바꿈(enter키)</p>
-        <p className={style.warning}>*홈페이지 주소는 전체주소를 적어야 합니다. 예)https://www.naver.com (o)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;www.naver.com (x)</p>
+        <h4>{props.type==="editMou" ? "협력업체 변경":"임원현황 변경"}</h4>
+        <p className={style.warning}>
+          {props.type==="editMou" ? 
+            `*형식 " 협력업체명///이미지명(없으면"-"로 표기)///협력업체홈페이지(없으면"-"로 표기)///협력업체 소개   줄바꿈(enter키)`
+          :
+            `*형식 : 체육회명///이미지명(없으면"-"로 표기)///체육회홈페이지(없으면"-"로 표기)///내용1///내용2///내용3...  줄바꿈(enter키)`
+          }
+        </p>
+        <p className={style.warning}>{`*홈페이지 주소는 전체주소를 적어야 합니다. 예)https://www.naver.com (o)    www.naver.com (x)`}</p>
         <p><textarea  value={text} onChange={onTextChange} rows="30" cols="120" required/></p>
       </div>
 
-      <Link passHref href={`/group/${props.type}Preview`}><a className={style.button} target="_blank" onClick={onPreviewClick}>미리보기</a></Link>
+      <Link passHref href={props.type==="editMou" ? `/mou/${props.type}Preview` : `/group/${props.type}Preview`}><a className={style.button} target="_blank" onClick={onPreviewClick}>미리보기</a></Link>
       <input type="submit" onClick={onSubmitClick} className={style.button2} value="적용"></input>
     </form>
   )

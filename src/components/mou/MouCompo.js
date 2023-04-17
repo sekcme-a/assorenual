@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react"
 import Loader from "src/components/public/Loader"
 import { firestore as db, storage } from "src/firebase/firebase"
-import style from "styles/group/groupList.module.css"
+import style from "styles/mou/mouList.module.css"
 import LazyItem from "src/components/public/LazyItem"
 import Link from "next/link"
 
-const GroupList = (props) => {
+const MouCompo = (props) => {
   const [groupData, setGroupData] = useState([])
   const [isLoading, setIsLoading] = useState(true)
 
@@ -24,6 +24,7 @@ const GroupList = (props) => {
         await db.collection("setting").doc(props.type).get().then(async (doc) => {
           if(doc.exists){
             const res = JSON.parse(doc.data().data)
+            console.log(res)
             setGroupData(res)
           }
           setIsLoading(false)
@@ -58,21 +59,21 @@ const GroupList = (props) => {
 
   return (
     <div>
+      <div style={{fontSize:"20px",  marginBottom:"10px"}}>대한생활체육회와 협력하고있는 기관들을 소개합니다.</div>
       {isLoading ? <Loader /> : (
         <>
           {groupData.map((item, index) => {
             return (
               <>
                 <div className={style.container} key={index}>
-                  <div className={style.title}>{item.name}</div>
+                 
                   <div className={style.imgContainer} onClick={()=>lookClose(item.img, item.name)}>
-                    <div style={{width:'100px'}}>
-                      {item.img === "-" ? <LazyItem src={`group/none.svg`} name={item.name} nameOfClass="groupImage" /> :
-                        <LazyItem src={`group/${item.img}`} name={item.name} nameOfClass="groupImage"/>
-                      }
-                    </div>
+                    {item.img === "-" ? <LazyItem src={`group/none.svg`} name={item.name} nameOfClass="groupImage" /> :
+                      <LazyItem src={`group/${item.img}`} name={item.name} nameOfClass="groupImage"/>
+                    }
                   </div>
                   <div className={style.contextContainer}>
+                    <div className={style.title}>{item.name}</div>
                     <p>{convertData(item.data)}</p>
                     {item.homepage !== "-" &&
                       <Link passHref href={item.homepage}><a className={style.button} target="_blank">홈페이지 방문</a></Link>
@@ -87,4 +88,4 @@ const GroupList = (props) => {
     </div>
   )
 }
-export default GroupList
+export default MouCompo

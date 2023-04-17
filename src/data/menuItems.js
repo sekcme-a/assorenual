@@ -180,6 +180,20 @@ export const MenuItems = [
     path: '/notice/reference',
     highlight: "reference",
   },
+  {
+    type: "main",
+    title: '협력기관',
+    child: true,
+    // path: '/info',
+    highlight: "",
+  },
+  {
+    type: "sub",
+    title: '협력기관',
+    subtitle: '협력기관',
+    path: '/mou/mou',
+    highlight: "mou",
+  },
   // {
   //   type: "main",
   //   title: '회원증',

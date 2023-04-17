@@ -8,8 +8,8 @@
 }
 
 .groupImage{
-  width: 100px;
-  border: 1px solid #888;
+  width: 100%;
+  /* border: 1px solid #888; */
   border-radius: 10px;
 }
 

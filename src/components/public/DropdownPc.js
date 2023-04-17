@@ -12,19 +12,22 @@ function DropdownPc(props) {
   useEffect(() => {
     if (props.mainTitle) {
       if (props.mainTitle === "체육회소개") {
-        setSubMenu(["단체소개", "대회정보", "알림마당", "자료실"])
+        setSubMenu(["단체소개", "대회정보", "알림마당", "자료실","협력기관"])
       }
       else if (props.mainTitle === "단체소개") {
-        setSubMenu(["체육회소개", "대회정보", "알림마당", "자료실"])
+        setSubMenu(["체육회소개", "대회정보", "알림마당", "자료실","협력기관"])
       }
       else if (props.mainTitle === "대회정보") {
-        setSubMenu(["체육회소개", "단체소개", "알림마당", "자료실"])
+        setSubMenu(["체육회소개", "단체소개", "알림마당", "자료실","협력기관"])
       }
       else if (props.mainTitle === "알림마당") {
-        setSubMenu(["체육회소개", "단체소개", "대회정보", "자료실"])
+        setSubMenu(["체육회소개", "단체소개", "대회정보", "자료실","협력기관"])
       }
       else if (props.mainTitle === "자료실") {
-        setSubMenu(["체육회소개", "단체소개", "대회정보", "알림마당"])
+        setSubMenu(["체육회소개", "단체소개", "대회정보", "알림마당","협력기관"])
+      }
+      else if (props.mainTitle === "협력기관") {
+        setSubMenu(["체육회소개", "단체소개", "대회정보", "알림마당","자료실"])
       }
     }
   },[props])
