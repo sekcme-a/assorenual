@@ -62,6 +62,8 @@ const Article = () => {
       setSelected("media")
     if (num === 2)
       setSelected("schedule")
+    if (num ===3)
+      setSelected("apply")
   }
   return (
     <div className={style.container}>
@@ -70,6 +72,7 @@ const Article = () => {
           <li onClick={()=>onTabClick(0)} className={selected==="anouncement" ? `${style.selected}` : undefined}>공지/소식사항</li>
           <li onClick={() => onTabClick(1)} className={selected==="media" ? `${style.selected}` : undefined}>언론보도</li>
           <li onClick={() => onTabClick(2)} className={selected==="schedule" ? `${style.selected}` : undefined}>대회/행사일정</li>
+          <li onClick={() => onTabClick(3)} className={selected==="apply" ? `${style.selected}` : undefined}>대회신청</li>
           <Link passHref href='notice/anouncement/1'><a><li> +</li></a></Link>
         </ul>
         <ul className={style.contentContainer}>

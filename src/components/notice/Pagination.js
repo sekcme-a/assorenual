@@ -18,10 +18,10 @@ const Pagination = (props) => {
     setGotoPage(props.page)
     await db.collection('postCount').doc(props.docName).get().then((doc) => {
       let pageCount;
-      if (doc.data().count % props.postPerPage !== 0)
-        pageCount = Math.floor(doc.data().count/props.postPerPage) + 1
+      if (doc.data()?.count % props.postPerPage !== 0)
+        pageCount = Math.floor(doc.data()?.count/props.postPerPage) + 1
       else
-        pageCount = Math.floor(doc.data().count /props.postPerPage)
+        pageCount = Math.floor(doc.data()?.count /props.postPerPage)
       setLastPage(pageCount)
       if (props.page < 4 && pageCount<=7) {
         firstPage = 1

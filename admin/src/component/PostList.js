@@ -30,10 +30,10 @@ const PostList = (props) => {
       let tempWarpPage = []
       await db.collection('postCount').doc(props.folderName).get().then((doc) => {
         let pageCount;
-        if (doc.data().count % props.postPerPage !== 0)
-          pageCount = Math.floor(doc.data().count/props.postPerPage + 1)
+        if (doc.data()?.count % props.postPerPage !== 0)
+          pageCount = Math.floor(doc.data()?.count/props.postPerPage + 1)
         else
-          pageCount = Math.floor(doc.data().count / props.postPerPage)
+          pageCount = Math.floor(doc.data()?.count / props.postPerPage)
         if (currentPage < 4 && pageCount<=7) {
           firstPage = 1
           endPage = pageCount

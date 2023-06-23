@@ -84,6 +84,7 @@ const Admin = () => {
               {slug === "editschedule" && <PostList folderName="schedule" postPerPage={9} />}
               {slug === "editmedia" && <PostList folderName="media" postPerPage={9} />}
               {slug === "editvideo" && <PostList folderName="video" postPerPage={16} />}
+              {slug === "editapply" && <PostList folderName="apply" postPerPage={9} />}
               {slug === "editMou" && userLevel==="admin" ? <SetGroup type="editMou"/> : noAuthority}
             </div>
           </>

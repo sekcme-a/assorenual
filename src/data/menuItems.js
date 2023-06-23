@@ -120,6 +120,13 @@ export const MenuItems = [
   {
     type: "sub",
     title: '대회정보',
+    subtitle: '대회신청',
+    path: '/notice/apply',
+    highlight: "",
+  },
+  {
+    type: "sub",
+    title: '대회정보',
     subtitle: '대회/행사일정',
     path: '/notice/schedule',
     highlight: "",

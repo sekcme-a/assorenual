@@ -24,12 +24,13 @@
   border-bottom: 3px solid rgb(255, 177, 59);
   margin: 0 30px;
   color: rgb(255, 115, 0);
+  /* background-color: red; */
 }
 .tab li{
   font-size: 22px;
   padding: 0 20px 0 20px;
   margin-top: 40px;
-  height: 20px;
+  height:20px;
   cursor: pointer;
   border-right: 2px solid rgb(255, 177, 59);
   font-weight: bold;
@@ -169,6 +170,9 @@
   }
   .tab li{
     font-size: 15px;
+  }
+  .tab a{
+    /* display: none; */
   }
   .articleContainer{
     /* margin: 0 10px;
