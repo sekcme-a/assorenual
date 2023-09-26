@@ -4,6 +4,12 @@ import { firestore as db, storage } from "src/firebase/firebase"
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import Link from "next/link"
+import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react"
+import "swiper/css";
+import "swiper/css/pagination";
+import SwiperCore, { Pagination, Navigation, Autoplay} from "swiper";
+
 
 const HeaderPopup = () => {
 
@@ -12,6 +18,7 @@ const HeaderPopup = () => {
   const [count, setCount] = useState(0)
   const [isLoading, setIsLoading] = useState(true)
   const [mobileMode, setMobileMode] = useState("false")
+  SwiperCore.use([Autoplay])
 
   useEffect(() => {
     function handleResize() {
@@ -59,7 +66,7 @@ const HeaderPopup = () => {
   
   return (
     <>
-      {mobileMode===false &&
+      {mobileMode===false ?
       <div className={style.container}>
         {linkList[count] === "-" || linkList[count] === undefined ?
           <img className={style.img} src={urlList[count]} alt={urlList[count]} />
@@ -75,6 +82,34 @@ const HeaderPopup = () => {
           </div>
         }
       </div >
+      :
+      <div className={style.mobile_container}>
+        <Swiper
+          grabCursor={true}
+          pagination={{
+            dynamicBullets: true,
+          }}
+          modules={[Pagination]}
+          className={style.swiper}
+          autoplay={{ delay: 4000, disableOnInteraction: false }}
+          loop={true}
+          slidesPerView="auto"
+        >
+
+          {urlList.map((item, index) => {
+            return (
+              <SwiperSlide key={index}>
+                <div className={style.img_container}>
+                  {/* <img src={item} /> */}
+                  <Image src={item} alt="배경" layout="fill" objectFit="cover" objectPosition="center" />
+                </div>
+                {/* <SwiperContainer data={item} /> */}
+              </SwiperSlide>
+            )
+          })}
+
+        </Swiper>
+      </div>
       }
     </>
   )

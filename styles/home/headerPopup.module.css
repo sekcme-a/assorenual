@@ -36,6 +36,26 @@
   cursor: pointer;
 }
 
+
+ .mobile_container{
+  /* width: 300px;
+  height: 600px; */
+  width: 100%;
+  background-color: white;
+}
+.swiper {
+  /* width: 100%; */
+  /* max-width: 350px; */
+  /* height: 620px; */
+}
+
+.img_container{
+  height:400px;
+  width: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
 @media (max-width: 1200px){
   .container{
     width: 400px;
@@ -43,3 +63,6 @@
     right: 10px;
   }
 }
+
+
+

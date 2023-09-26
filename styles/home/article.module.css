@@ -140,7 +140,7 @@
   .tab{height: 50px; margin: 0 15px}
   .tab li{
     margin-top: 15px;
-    font-size: 15px;
+    font-size: 13px;
     padding: 0 5px;
     
   }
@@ -169,7 +169,7 @@
     margin: 0 10px;
   }
   .tab li{
-    font-size: 15px;
+    font-size: 13px;
   }
   .tab a{
     /* display: none; */
@@ -188,7 +188,7 @@
   }
   .tab li{
     margin-top: 10px;
-    font-size: 13px;
+    font-size: 11px;
   }
 }
 @media screen and (max-width: 320px){
@@ -196,6 +196,6 @@
     width: 200px;
   }
   .tab li{
-    font-size: 12px;
+    font-size: 11px;
   }
 }
