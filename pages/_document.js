@@ -14,6 +14,7 @@ class MyDocument extends Document {
           <meta charSet="UTF-8" />
           <link passHref rel="icon" href="/favicon.ico" />
           <meta name="naver-site-verification" content="fcd6939d5a2a544afe2de373e246bedd86d5702d" />
+          
         </Head>
         <body>
           <Main />
