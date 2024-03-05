@@ -201,6 +201,20 @@ export const MenuItems = [
     path: '/mou/mou',
     highlight: "mou",
   },
+  {
+    type: "main",
+    title:"후원안내",
+    child: false,
+    highlight:"",
+    path:"/support"
+  },
+  {
+    type: "sub",
+    title: '후원안내',
+    subtitle: '후원안내',
+    path: '/support',
+    highlight: "support",
+  },
   // {
   //   type: "main",
   //   title: '회원증',
