@@ -12,7 +12,7 @@ class MyDocument extends Document {
       <Html lang="kr">
         <Head>
           <meta charSet="UTF-8" />
-          <link passHref rel="icon" href="/favicon.ico" />
+          <link passHref rel="icon" href="https://xn--vk1by6xrzecngs4l6obxj.com/favicon.ico" />
           <meta name="naver-site-verification" content="fcd6939d5a2a544afe2de373e246bedd86d5702d" />
           
         </Head>
