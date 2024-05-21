@@ -83,11 +83,6 @@ const Status = (props) => {
 
   return (
     <>
-       <HeadMeta
-        title="대한생활체육회 - 임원현황"
-        description="대한생활체육회의 임원현황을 알려드립니다 - 국민의 건강과 행복의 장을 여는 대한생활체육회"
-        url="https://xn--vk1by6xrzecngs4l6obxj.com/info/status"
-      />
       <div className={style.customBodyStatus}>
       </div>
       <div className={style.body}>

@@ -43,11 +43,6 @@ const Location = (props) => {
 
   return (
     <>
-       <HeadMeta
-        title="대한생활체육회 - 오시는 길"
-        description="대한생활체육회 오시는 길 - 서울특별시 영등포구 버드나루로88, 인따르시아빌딩 101호"
-        url="https://xn--vk1by6xrzecngs4l6obxj.com/info/location"
-      />
       { isLoading?<Loader /> :
         <>
           <SubMenuTitle title="오시는 길" subtitle="대한생활체육회로 오시는 길을 안내드립니다." />

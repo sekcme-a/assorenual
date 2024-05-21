@@ -30,11 +30,6 @@ const Chart = (props) => {
   },[])
   return (
     <>
-       <HeadMeta
-        title="대한생활체육회 - 중앙 조직도"
-        description="대한생활체육회의 중앙 조직도를 소개합니다 - 국민의 건강과 행복의 장을 여는 대한생활체육회"
-        url="https://xn--vk1by6xrzecngs4l6obxj.com/info/chart"
-      />
 
       <SubMenuTitle title="중앙 조직도" subtitle="대한생활체육회의 중앙 조직도를 소개합니다."/>
       <div className={style.container}>

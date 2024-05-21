@@ -47,7 +47,7 @@ const Info = () => {
   return (
     <>
       <HeadMeta
-        title="대한생활체육회 - 알림마당"
+        title="알림마당 - 대한생활체육회"
         description="대한생활체육회의 공지/소식사항, 언론보도, 포토갤러리등을 확인하세요."
         url="https://xn--vk1by6xrzecngs4l6obxj.com/notice/media/1"
       />

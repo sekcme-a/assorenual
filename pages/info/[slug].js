@@ -47,9 +47,21 @@ const Info = () => {
   return (
     <>
       <HeadMeta
-      title="대한생활체육회 - 체육회 소개"
-      description="대한생활체육회의 총재 인삿말, 설립목적, 중앙조직도 등을 소개합니다."
-      url="https://xn--vk1by6xrzecngs4l6obxj.com/info/greet"
+      title={
+        slug==="greet" ? "총재 인사말 - 대한생활체육회" : 
+        slug==="purpose" ? "설립목적 - 대한생활체육회" : 
+        slug==='chart' ? '조직도 - 대한생활체육회' : 
+        slug==="status" ? "임원현황 - 대한생활체육회" :
+        "오시는 길 - 대한생활체육회" 
+      }
+      description={
+        slug==="greet" ? "대한생활체육회 총재 김균식의 인사말입니다." : 
+        slug==="purpose" ? "대한생활체육회의 설립목적을 소개합니다 - 스포츠가 최고의 국민건강 복지다." : 
+        slug==='chart' ? '대한생활체육회의 중앙 조직도를 소개합니다.' : 
+        slug==="status" ? "현재 대한생활체육회의 임원현황을 소개드립니다." :
+        "대한생활체육회로 오시는 길을 안내드립니다 : 영등포동7가 94-49" 
+      }
+      url={`https://xn--vk1by6xrzecngs4l6obxj.com/info/${slug}`}
       />
       {isPreview && <div className="preview">미리보기중입니다.</div>}
       <Banner bannerNumber={bannerRandom}/>
@@ -57,11 +69,6 @@ const Info = () => {
         <LocNav title={title} subtitle={subtitle} />
         <NavbarVerticle loc={title}/>
         <div className="content__container">
-          {slug==="greet" && <Greet preview="false" />}
-          {slug === "purpose" && <Purpose preview="false"/>}
-          {slug === "chart" && <Chart preview="false"/>}
-          {slug === "status" && <Status preview="false"/>}
-          {slug === "location" && <Location preview="false"/>}
           {slug==="greetPreview" && <Greet preview="true" />}
           {slug==="purposePreview" && <Purpose preview="true" />}
           {slug==="chartPreview" && <Chart preview="true" />}
