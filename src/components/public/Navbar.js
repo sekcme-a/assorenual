@@ -28,13 +28,19 @@ const Navbar = () => {
       <div className="navbar-logo">
         <Link href="/" passHref>
           <a>
-          <Image
+          {/* <Image
             src="/logo.png"
             height={60}
             width={190}
             alt="대한생활체육회 로고"
             className="navbar-logo-img">
-            </Image>
+            </Image> */}
+            <img
+              src="/logo.png"
+              className="navbar-logo-img"
+              alt="대생체 로고"
+              style={{width:"190px"}}
+            />
             </a>
         </Link>
       </div>

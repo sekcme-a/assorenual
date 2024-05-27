@@ -40,13 +40,19 @@ function DropdownPc(props) {
         <div className="dropdown-m">
           <h4>국민의 건강과 행복의 장을 여는 대한생활체육회</h4>
           <h3>{props.mainTitle}</h3>
-          <Image
+          {/* <Image
             src="/logo-circle-noBackground.png"
             height={130}
             width={130}
             alt="대한생활체육회 로고"
             className="dropdown-logo">
-          </Image>
+          </Image> */}
+                      <img
+              src="/logo-circle-noBackground.png"
+              className="navbar-logo-img"
+              alt="대생체 원형  로고"
+              style={{width:"130px"}}
+            />
         </div>
         <div className="dropdown-content">
           <ul className="main-dropdown-content-container">

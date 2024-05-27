@@ -35,16 +35,22 @@ const Navbar = () => {
   },[])
 
   return (
-    <div className="navbar-mobile">
+    <div className="navbar-mobile" >
       <div className="navbar-mobile-logo">
         <Link href="/" passHref>
           <a>
-          <Image
+          {/* <Image
             src="/logo.png"
             height={50}
             width={150}
             alt="대한생활체육회 로고"
             className="navbar-logo-img"
+            /> */}
+                        <img
+              src="/logo.png"
+              className="navbar-logo-img"
+              alt="대생체 로고"
+              style={{width:"130px"}}
             />
             </a>
         </Link>
