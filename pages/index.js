@@ -6,6 +6,7 @@ import About from "src/components/home/About"
 import Video from "src/components/home/Video"
 import Photo from "src/components/home/Photo"
 import HeadMeta from 'src/components/public/HeadMeta'
+import Banner from 'src/components/home/Banner'
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <Video />
         <About />
         <Photo />
+        <Banner />
       </div>
     </>
   )
