@@ -18,6 +18,7 @@ import NavbarMobile from "src/components/public/NavbarMobile"
 import { UserContext } from "src/data/context"
 import { useUserData } from "src/firebase/useUserData"
 import Script from "next/script"
+import { useRouter } from 'next/router'
 // import 'react-quill/dist/quill.snow.css'
 
 function MyApp({ Component, pageProps }) {
@@ -35,12 +36,15 @@ function MyApp({ Component, pageProps }) {
     handleResize();
     window.addEventListener("resize", handleResize);
   }, [])
+
+  const router = useRouter();
+  const baseUrl = "https://www.xn--vk1by6xrzecngs4l6obxj.com";
   
   return (
     <UserContext.Provider value={userData}>
       <Head>  
         <meta httpEquiv="X-UA-Compatible" content="IE=edge"></meta>
-        <link rel="canonical" href="https://xn--vk1by6xrzecngs4l6obxj.com"></link>
+        <link rel="canonical"  href={`${baseUrl}${router.asPath.split("?")[0]}`}></link>
         <meta name="robots" content="index,follow"></meta>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
       </Head>
