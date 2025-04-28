@@ -12,14 +12,14 @@ const Footer = () => {
           <p>상호 : (사)대한생활체육회 | 대표자명 : 김균식</p>
           <p>고유번호 : 102-82-10135</p>
           <p>대표번호 : 02-2088-7508 | 팩스 : 02-2088-7509 | 이메일 : ksfaa21@naver.com</p>
-          <p>주소 : 서울특별시 영등포구 버드나루로88, 인따르시아빌딩 101호</p>
+          <p>주소 : 서울특별시 금천구 가산동 459-6 SH드림 307호</p>
         </div>
         <p className="footer-company-name">대한생활체육회 &copy; 2021</p>
       </div>
       <div className="footer-center">
         <div>
           <div className="icon"><MapIcon/></div>
-          <p><span>서울특별시 영등포구 버드나루로88</span>인따르시아빌딩 101호</p>
+          <p><span>서울특별시 금천구 가산동 459-6</span>SH드림 307호</p>
         </div>
         <div>
           <div className="icon"><PhoneIcon /></div>
